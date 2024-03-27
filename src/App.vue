@@ -1,38 +1,50 @@
-<script setup>
-
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-  </header>
+  <div id="app">
+    <header>
+      <router-link to="/">Accueil</router-link>
+      <router-link to="/home">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </header>
+
+    <router-view></router-view>
+
+    <footer>
+     footer
+    </footer>
+  </div>
 </template>
 
-<style scoped>
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style>
+#app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 header {
-  line-height: 1.5;
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>
