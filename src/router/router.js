@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LandingPage from "@/views/LandingPage.vue";
-import AboutView from "@/views/AboutView.vue";
-import HomeView from "@/views/HomeView.vue";
-// Importez vos autres composants de vue et configurez les routes
+import Dashboard from '@/views/Dashboard.vue';
+import PieChart from '@/views/PieChart.vue';
+import BarChart from '@/views/BarChart.vue';
 
 const routes = [
-    { path: '/', component: LandingPage },
-    { path: '/about', component: AboutView },
-    { path: '/home', component: HomeView },
+    { path: '/', component: Dashboard },
+    { path: '/pie-chart', component: PieChart },
+    { path: '/bar-chart', component: BarChart },
+    // { path: '/', component: Products },
 ];
 
 const router = createRouter({
